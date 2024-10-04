@@ -1,5 +1,5 @@
 [build]
 system = "dockerfile"
 
-[services.nginx]
+[services.web]
 port = 8000
