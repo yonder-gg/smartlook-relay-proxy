@@ -2,6 +2,9 @@ FROM nginx:1-alpine
 
 ARG COMMIT_SHA="unknown"
 
+# Add bash to the image due to apppack requirement https://docs.apppack.io/how-to/apps/dockerfile-builds/
+RUN apk add --no-cache bash
+
 COPY ./nginx/templates /etc/nginx/templates
 COPY --chmod=0555 ./nginx/entrypoint.sh /docker-entrypoint.d/40-smartlook-relay-proxy.sh
 
