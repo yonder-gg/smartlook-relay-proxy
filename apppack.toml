@@ -2,5 +2,5 @@
 system = "dockerfile"
 
 [services.web]
-command = "/docker-entrypoint.sh nginx -g 'daemon off;'"
+command = "nginx -g 'daemon off;'"
 port = 8000
